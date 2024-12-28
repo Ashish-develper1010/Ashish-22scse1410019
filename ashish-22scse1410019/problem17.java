@@ -14,5 +14,6 @@ public class questions {
         System.out.print("Enter  any year  : ");
         int year = sc.nextInt();
         leapyearcheck(year);
+        
     }
 }
