@@ -1,25 +1,21 @@
 14. WAP to take input rate & quantity and calculate the amount. Finally print net amount to be paid after allowing 15% discount if amount exceeds 2000 rs.
 public class questions {
-    public static void greater(int first,int sec,int third)
+    public static int amtcalculator(int rate,int quantity)
     {
-        if (first > sec && sec>third)
+        int amt = rate*quantity;
+        if(amt>=2000)
         {
-            System.out.println(first+" is greater among all.");
-        } else if (first > sec && first < third) {
-            System.out.println(third+" is gteater among all");
-        } else if (first < sec && sec < third) {
-            System.out.println(third+" is greater among all");
+            amt -= (amt*15/100);
         }
-        else if(first>sec && first>third) System.out.println(first+" is greater among all");
-        else System.out.println(sec +" is greater among all");
+        return amt;
     }
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter  three numbers  : ");
+        System.out.print("Enter  rate of the product : ");
         int a = sc.nextInt();
+        System.out.print("Enter quantity of the product : ");
         int b = sc.nextInt();
-        int c = sc.nextInt();
-        greater(a,b,c);
+        System.out.println( "You have to pay amount : "+amtcalculator(a,b));
     }
 }
