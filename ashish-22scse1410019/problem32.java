@@ -15,3 +15,4 @@ public class questions {
         System.out.println("The reversed string is : " + sb.toString());
     }
 }
+
